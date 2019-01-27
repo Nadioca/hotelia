@@ -2,3 +2,84 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+.swiper-slide {
+  width: 100%;
+}
+
+.paralax {
+  background: url("http://rabonadev.online/hotela/img/promote.jpg") center no-repeat;
+  background-size: cover;
+  color: #fff;
+  height: 200px;
+  position: relative;
+}
+
+.paralax .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  background-color: #f4f4f4;
+  padding-top: 16px;
+}
+
+
+.features {
+
+  fa-icon {
+    color: #cbb079;
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 13px;
+    color: #888;
+  }
+
+  h3 {
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    color: #343434;
+  }
+}
+
+footer {
+  background: #33261c;
+  text-align: center;
+  padding: 40px 0;
+  display: block;
+}
+
+.redes {}
+
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+.linea_pie {
+  height: 1px;
+  width: 90%;
+  background-color: #f4f4f4;
+  margin: 20px auto;
+}
+
+p.copyright {
+  font-family: 'Open Sans';
+  font-size: 12px;
+  color: #fff;
+}

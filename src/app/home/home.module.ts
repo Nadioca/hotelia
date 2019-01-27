@@ -4,13 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { HomePage } from './home.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
+    IonicModule, FontAwesomeModule,
     RouterModule.forChild([
       {
         path: '',
