@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>infoactividad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  
+    <ion-card>
+      
+      <img [src]="actividad.img" />
+      <ion-card-content>
+          <ion-card-title>
+            {{actividad.titulo}}
+          </ion-card-title>
+          <p>
+              {{actividad.texto_breve}}
+          </p>
+      </ion-card-content>
+      <ion-card-content>
+        <p>Precio: {{actividad.precio}} €</p>
+
+        
+      </ion-card-content>
+  </ion-card>
+  
+  
+
+</ion-content>

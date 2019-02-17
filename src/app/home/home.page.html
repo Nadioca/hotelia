@@ -9,36 +9,20 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngFor="let task of portada">
 
-  <ion-slides pager="true" [options]="slideOpts">
-    <ion-slide>
-      <ion-img src="http://rabonadev.online/hotela/img/slider1.jpg"></ion-img>
-    </ion-slide>
-    <ion-slide>
-      <ion-img src="http://rabonadev.online/hotela/img/slider2.jpg"></ion-img>
+    <ion-item class="text" *ngFor="let actv of actividades | keyvalue">
+        Key: {{actv.key}}, value: {{actv.value.img}}
+    </ion-item>
+
+  <ion-slides pager="true" [options]="slideOpts" >
+    <ion-slide *ngFor="let banner of task | keyvalue">
+      <ion-img [src]="banner.value.img"></ion-img>
     </ion-slide>
 
   </ion-slides>
 
-
-
   <ion-grid>
-    <ion-row>
-      <ion-col class="features" text-center>
-        <fa-icon icon="wifi"></fa-icon>
-        <h3>Wifi Gratis</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur</p>
-      </ion-col>
-
-      <ion-col class="features" text-center>
-        <fa-icon icon="tv"></fa-icon>
-        <h3>Wifi Gratis</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur</p>
-      </ion-col>
-
-    </ion-row>
-
     <ion-row>
       <ion-col class="features" text-center>
         <fa-icon icon="wifi"></fa-icon>
@@ -94,41 +78,14 @@
         </div>
     </div>
 
-    <ion-card>
-        <img src="https://c1.staticflickr.com/9/8436/7825574560_87787b89cb_n.jpg" />
+    <ion-card *ngFor="let actv of actividades | keyvalue" [routerLink]="['/infoactividad', actv.value.id]">
+        <img [src]="actv.value.img" />
         <ion-card-content>
             <ion-card-title>
-                Nine Inch Nails Live
+                {{actv.value.titulo}}
             </ion-card-title>
             <p>
-                The most popular industrial group ever, and largely
-                responsible for bringing the music to a mass audience.
-            </p>
-        </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-        <img src="http://actividadesasturias.com/wp-content/uploads/2015/06/motosagua2.jpg" />
-        <ion-card-content>
-            <ion-card-title>
-                Nine Inch Nails Live
-            </ion-card-title>
-            <p>
-                The most popular industrial group ever, and largely
-                responsible for bringing the music to a mass audience.
-            </p>
-        </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-        <img src="http://3.bp.blogspot.com/-KFbmQ-7Ooew/Tx3EKKUHfRI/AAAAAAAAACg/JVnKH6k_UCQ/s640/-67.jpg" />
-        <ion-card-content>
-            <ion-card-title>
-                Nine Inch Nails Live
-            </ion-card-title>
-            <p>
-                The most popular industrial group ever, and largely
-                responsible for bringing the music to a mass audience.
+                {{actv.value.texto_breve}}
             </p>
         </ion-card-content>
     </ion-card>

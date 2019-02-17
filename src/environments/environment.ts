@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyB3cd_w7OsczydrklLnHt6csNBq0mly-y0",
+    authDomain: "hotelia-8be11.firebaseapp.com",
+    databaseURL: "https://hotelia-8be11.firebaseio.com",
+    projectId: "hotelia-8be11",
+    storageBucket: "hotelia-8be11.appspot.com",
+    messagingSenderId: "892574526017"
+  }
 };
 
 /*

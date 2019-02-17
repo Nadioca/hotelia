@@ -16,7 +16,8 @@ const routes: Routes = [
     loadChildren: './list/list.module#ListPageModule'
   },
   { path: 'actividades',
-   loadChildren: './actividades/actividades.module#ActividadesPageModule' }
+   loadChildren: './actividades/actividades.module#ActividadesPageModule' },
+  { path: 'infoactividad/:id', loadChildren: './infoactividad/infoactividad.module#InfoactividadPageModule' }
 ];
 
 @NgModule({
