@@ -10,18 +10,17 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
-    </ion-item>
-  </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
+
+  <ion-card *ngFor="let actv of actividades | keyvalue" [routerLink]="['/infoactividad', actv.value.id]">
+    <img [src]="actv.value.img" />
+    <ion-card-content>
+        <ion-card-title>
+            {{actv.value.titulo}}
+        </ion-card-title>
+        <p>
+            {{actv.value.texto_breve}}
+        </p>
+    </ion-card-content>
+</ion-card>
+  
 </ion-content>

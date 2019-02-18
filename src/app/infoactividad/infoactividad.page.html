@@ -1,29 +1,62 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>infoactividad</ion-title>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>{{actividad.titulo}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
-  
-    <ion-card>
-      
-      <img [src]="actividad.img" />
-      <ion-card-content>
-          <ion-card-title>
-            {{actividad.titulo}}
-          </ion-card-title>
-          <p>
-              {{actividad.texto_breve}}
-          </p>
-      </ion-card-content>
-      <ion-card-content>
-        <p>Precio: {{actividad.precio}} €</p>
+<ion-content>
 
-        
-      </ion-card-content>
+  <ion-card>
+
+    <img [src]="actividad.img" />
+    <ion-card-content>
+      <ion-card-title>
+        {{actividad.titulo}}
+      </ion-card-title>
+      <p>
+        {{actividad.texto_breve}}
+      </p>
+      <p class="precio">Precio: {{actividad.precio}} €/persona</p>
+    </ion-card-content>
+    <ion-card-content>
+
+
+      <h4 class="reserva_title" text-center>Reservar</h4>
+
+      <form (ngSubmit)="reservarActividad()">
+
+        <ion-list>
+
+          <ion-item>
+            <ion-label>Nº personas</ion-label>
+            <ion-select [(ngModel)]="todo.num_personas" name="num_personas" (ionChange)=cambiarPrecio(todo.num_personas)>
+              <ion-select-option value="1" [attr.selected]="true">1</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+        </ion-list>
+
+
+        <ion-item>
+          <ion-label>Total a pagar</ion-label>
+          <p id="precio">{{total}} €</p>
+        </ion-item>
+
+        <ion-button ion-button type="submit">
+          <ion-icon slot="start" name="cart"></ion-icon>
+          Reservar
+        </ion-button>
+
+      </form>
+
+
+    </ion-card-content>
   </ion-card>
-  
-  
+
+
 
 </ion-content>
