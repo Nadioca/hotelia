@@ -17,7 +17,8 @@ const routes: Routes = [
   },
   { path: 'actividades',
    loadChildren: './actividades/actividades.module#ActividadesPageModule' },
-  { path: 'infoactividad/:id', loadChildren: './infoactividad/infoactividad.module#InfoactividadPageModule' }
+  { path: 'infoactividad/:id', loadChildren: './infoactividad/infoactividad.module#InfoactividadPageModule' },
+  { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' }
 ];
 
 @NgModule({

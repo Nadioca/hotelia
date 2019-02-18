@@ -19,6 +19,11 @@ export class AppComponent {
       title: 'Actividades',
       url: '/list',
       icon: 'list'
+    },
+    {
+      title: 'Perfil',
+      url: '/perfil',
+      icon: 'person'
     }
   ];
 

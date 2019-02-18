@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+    <ion-card>
+        <ion-card-header text-center>
+            <ion-avatar  class="hydrated">
+                <img src="https://static.thenounproject.com/png/630729-200.png">
+              </ion-avatar>
+          <ion-card-subtitle>habitacion: {{usuario.room}}</ion-card-subtitle>
+          <ion-card-title>{{usuario.name}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Keep close to Nature's heart... and break clear away, once in awhile,
+          and climb a mountain or spend a week in the woods. Wash your spirit clean.
+          <br>
+          <p><strong>Gastos:</strong> {{usuario.gastos}} €</p>
+
+          <p><small>*los gastos se cargarán en su cuenta a la salida del hotel</small></p>
+        </ion-card-content>
+      </ion-card>
+
+</ion-content>
