@@ -18,7 +18,9 @@ const routes: Routes = [
   { path: 'actividades',
    loadChildren: './actividades/actividades.module#ActividadesPageModule' },
   { path: 'infoactividad/:id', loadChildren: './infoactividad/infoactividad.module#InfoactividadPageModule' },
-  { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' }
+  { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' },
+  { path: 'lista-incidencias', loadChildren: './lista-incidencias/lista-incidencias.module#ListaIncidenciasPageModule' },
+  { path: 'crear-incidencia', loadChildren: './crear-incidencia/crear-incidencia.module#CrearIncidenciaPageModule' },
 ];
 
 @NgModule({

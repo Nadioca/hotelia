@@ -26,13 +26,16 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/da
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { environment } from '../environments/environment';
+import { PlaceHolderPipe } from './place-holder.pipe';
+
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 
 
 
 library.add(fas, far, fab);
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, PlaceHolderPipe],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -44,7 +47,7 @@ library.add(fas, far, fab);
   providers: [
     StatusBar,
     AngularFireDatabase,
-    SplashScreen, 
+    SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

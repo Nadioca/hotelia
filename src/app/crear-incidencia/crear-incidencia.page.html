@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-button color="danger" slot="start" [routerLink]="['/perfil']">Cancelar</ion-button>
+
+        <ion-button slot="end" (click)="crear_post()"
+            [disabled]=" titulo.length <= 1 || imagenPreview.length <= 1 || content.length <= 1 ">
+            Crear incidencia
+        </ion-button>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label floating>Titulo</ion-label>
+            <ion-input type="text" [(ngModel)]="titulo"></ion-input>
+        </ion-item>
+        <ion-label floating>Comentario</ion-label>
+        <ion-item>
+            <ion-textarea [(ngModel)]="content" placeholder="introduce tu comentario..."></ion-textarea>
+        </ion-item>
+
+        <br>
+
+        <ion-item *ngIf="imagenPreview">
+            <img [src]="imagenPreview">
+        </ion-item>
+
+    </ion-list>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-button expand="block" (click)="seleccionar_foto()">
+                    <ion-icon slot="start" name="photos"></ion-icon>
+                    Seleccionar
+                </ion-button>
+            </ion-col>
+            <ion-col>
+
+                <ion-button expand="block" (click)="mostrar_camara()">
+                    <ion-icon slot="start" name="camera"></ion-icon>
+                    Cámara
+                </ion-button>
+
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+
+
+
+
+
+</ion-content>

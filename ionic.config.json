@@ -1,6 +1,8 @@
 {
   "name": "hotelia",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "243b0859"
 }

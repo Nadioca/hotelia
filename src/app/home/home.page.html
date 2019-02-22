@@ -11,10 +11,6 @@
 
 <ion-content *ngFor="let task of portada">
 
-    <ion-item class="text" *ngFor="let actv of actividades | keyvalue">
-        Key: {{actv.key}}, value: {{actv.value.img}}
-    </ion-item>
-
   <ion-slides pager="true" [options]="slideOpts" >
     <ion-slide *ngFor="let banner of task | keyvalue">
       <ion-img [src]="banner.value.img"></ion-img>
